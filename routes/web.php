@@ -13,6 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/hello', function () {
+ return 'Hello World';
 });
+Route::get('/world', function () {
+    return 'World';
+   });
+
+   Route::get('/user/{AustrriechArgono}', function ($Austrriech) {
+    return 'Nama saya ' . $Austrriech;
+   });
+
+   Route::get('/posts/{post}/comments/{comment}', function 
+($postId, $commentId) {
+ return 'Pos ke-'.$postId = '2'." Komentar ke-: ".$commentId = '1';
+});
+Route::get('/user/{name?}', function ($name='John') {
+    return 'Nama saya '.$name;
+    });
+
+
